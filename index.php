@@ -122,7 +122,6 @@ LIMIT 0 , 30', array($_POST['itemID']));
 			
             $sell = $xml->xpath('/exec_api/marketstat/type[@id="'.$mineral.'"]/sell/min'); 
 			$sell = ((int)$sell[0] - ((int)$sell[0] * $percentage));
-			print_r($sell);
             $totalSell += ($sell*($quantity*$yield));
         }
         
